@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://images.pexels.com/photos/8386563/pexels-photo-8386563.jpeg" type="image/x-icon">
+    <title>Advanced HTML5 Elements and Forms</title>
+</head>
+<body>
+    <div class="heading-text">
+        <h1>Advanced HTML5 Elements and Forms</h1>
+    </div>
+    <div class="main-container">
+        <!-- <p>We'll be focusing on the following for today's assignment</p> -->
+        <div class="list_img">
+            <p>We'll be focusing on the following for today's assignment</p>
+            <ol type="i">
+                <li>Ordered list</li>
+                <li>External image</li>
+                <li>Table</li>
+                <li>Registration form</li>
+            </ol>
+        </div>
+
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/7607320/pexels-photo-7607320.jpeg" alt="">
+        </div>
+    </div>
+
+    <div>
+        <table class="table-container" border="1" cellpadding="10" cellspacing="0">
+            <caption>Registered users</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>123 vi road</td>
+                    <td>johndoe@gmail.com</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>456 lekki road</td>
+                    <td>janesmith@yahoo.com</td>
+                    <td>987-654-3210</td>
+                </tr>
+                <tr>
+                    <td>Bob Johnson</td>
+                    <td>789 ikoyi road</td>
+                    <td>bobjohnson1@outlook.com</td>
+                    <td>555-123-4567</td>
+                </tr>
+                <tr>
+                    <td>Alice Brown</td>
+                    <td>321 lagos road</td>
+                    <td>alicebrown@live.com</td>
+                    <td>444-987-6543</td>
+                </tr>
+        </table>
+    </div>
+
+    <div class="form-container">
+        <form action="submit_form.php" method="post">
+            <h2>Registration Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="gender">Gender:</label><br>
+            <div class="radio-buttons">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+              </div>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter a strong password" required><br><br>
+
+            <label for="date">Date of Birth:</label>
+            <input type="date" name="date" id="date" required><br><br> 
+            
+            <label for="country">Choose your country:</label>
+            <select id="country" name="country">
+                <option value="">Loading countries...</option> <!-- Placeholder option -->
+            </select>
+
+            <!-- <input type="submit" value="Register"> -->
+            <button type="submit" value="Register">Register</button>
+        </form>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 Wendy Kalu. All rights reserved.</p>
+    </footer>
+
+
+
+    <script>
+        // This function will fetch countries and populate the dropdown
+        function loadCountries() {
+          fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(countries => {
+              const countrySelect = document.getElementById('country');
+              countrySelect.innerHTML = ''; 
+    
+              countries.forEach(country => {
+                const option = document.createElement('option');
+                option.value = country.cca2; 
+                option.textContent = country.name.common;
+                countrySelect.appendChild(option);
+              });
+            })
+            .catch(error => {
+              console.error('Error fetching country data:', error);
+              const countrySelect = document.getElementById('country');
+              countrySelect.innerHTML = '<option value="">Failed to load countries</option>';
+            });
+        }
+    
+        // Load countries when the page is ready
+        window.onload = loadCountries;
+      </script>
+</body>
+</html>

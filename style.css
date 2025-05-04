@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: Arial, sans-serif; */
+    background-color: #f4f4f4;
+}
+
+.heading-text h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.list_img p, ol{
+    font-size: 20px;
+}
+
+.list_img ol {
+    padding-top: 10px;
+}
+
+.list_img ol li {
+    padding-bottom: 10px;
+}
+
+.image-container img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;   
+    float: right; 
+    padding-top: 10px;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse; 
+  }
+
+.table-container caption {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #000; 
+    padding: 10px;
+    text-align: center; 
+}
+
+.form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-container input, select {
+    width: 100%;
+    /* text-align: center; */
+    padding-left: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.radio-buttons {
+    display: flex;
+    margin-right: 50px;
+    align-items: baseline;
+    /* align-items: center; */
+    /* flex-direction: column; */
+  }
+
+  .radio-buttons label {
+    margin: 10px 0;  /* Add space between each label */
+    align-items: center;
+    justify-content: center;
+  }
+
+  input[type="radio"] {
+    margin-right: 10px;  /* Space between radio button and label */
+  }
+
+
+.form-container form button {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.form-container button {
+    background-color: #4CAF50;
+    width: 50%;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* background-color: #333; */
+}
+
+.footer-container {
+    width: 100%;
+    /* color: white; */
+    text-align: center;
+    /* border-radius: 10px; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #333;
+
+}
+
+
+.footer-container p {
+    margin: 0;
+    font-size: 1.2em;
+    color: inherit;
+}
